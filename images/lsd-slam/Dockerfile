@@ -24,7 +24,7 @@ RUN cd ~ && mkdir rosbuild_ws && cd rosbuild_ws && \
 	rosws set -y ~/rosbuild_ws/package_dir -t . && \
 	echo 'source ~/rosbuild_ws/setup.bash' >> ~/.bashrc && \
 	cd package_dir && \
-	git clone https://github.com/tum-vision/lsd_slam.git lsd_slam
+	git clone https://github.com/maimuzo/lsd_slam.git lsd_slam
 	
 RUN cd ~/rosbuild_ws/package_dir && \
 	sed -i "/^#.*openFabMap/s/^#//" ./lsd_slam/lsd_slam_core/CMakeLists.txt && \
